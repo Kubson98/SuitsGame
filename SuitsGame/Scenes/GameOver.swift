@@ -38,7 +38,7 @@ class GameOver: SKScene {
     }
     
     func createHuman() {
-        imageHuman = SKSpriteNode(imageNamed: "LouisGameOver")
+        imageHuman = SKSpriteNode(imageNamed: "louisGameOver")
         imageHuman.zPosition = 0
         imageHuman.position = CGPoint(x: imageHuman.size.width, y: frame.height / 2)
         self.addChild(imageHuman)
