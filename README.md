@@ -1,6 +1,12 @@
 # SuitsGame (in Progress)
 
-## Game uses SpriteKit. Modeled on the old game "Claw".The game will have a theme from the Suits series.
+### Game using SpriteKit. Modeled on the old game "Claw".The game will have a theme from the Suits series.
+
+- Scrolling
+- Physics 2D
+- Gameplay
+- HUD
+- Sounds
 
 ![alt tag](https://user-images.githubusercontent.com/45259348/92417439-69108200-f162-11ea-988a-1f9a00ea7aa8.png)
 
