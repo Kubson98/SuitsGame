@@ -12,11 +12,13 @@ class GameOver: SKScene {
     
     var imageGameOver = SKSpriteNode()
     var imageHuman = SKSpriteNode()
+    var button = SKSpriteNode()
     
     override func didMove(to view: SKView) {
         createBG()
         createImage()
         createHuman()
+        createAgainButton()
         tryAgain()
     }
     
@@ -32,7 +34,7 @@ class GameOver: SKScene {
         imageGameOver = SKSpriteNode(imageNamed: "game-over")
         imageGameOver.zPosition = 1
         imageGameOver.position = CGPoint(x: frame.width / 2, y: frame.height / 2)
-        var rotation = SKAction.rotate(byAngle: 0.5, duration: 0)
+        let rotation = SKAction.rotate(byAngle: 0.5, duration: 0)
         imageGameOver.run(rotation)
         self.addChild(imageGameOver)
     }
@@ -44,14 +46,24 @@ class GameOver: SKScene {
         self.addChild(imageHuman)
     }
     
+    func createAgainButton() {
+        button = SKSpriteNode(imageNamed: "againButton")
+        button.name = "try again"
+        button.setScale(0.4)
+        button.zPosition = 2
+        button.position = CGPoint(x: frame.maxX - button.size.width * 1.5, y: button.size.height / 2)
+        self.addChild(button)
+        tryAgain()
+    }
+    
     func tryAgain() {
         let label = SKLabelNode(text: "TRY AGAIN")
         label.name = "try again"
         label.zPosition = 5
-        label.fontSize = 40
+        label.fontSize = 25
         label.fontColor = UIColor.black
         label.fontName = "Thonburi-Bold"
-        label.position = CGPoint(x: frame.maxX - 300, y: 30)
+        label.position = CGPoint(x: button.position.x, y: button.position.y - 10)
         self.addChild(label)
     }
     
