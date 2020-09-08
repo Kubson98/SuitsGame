@@ -49,9 +49,9 @@ class GameOver: SKScene {
     func createAgainButton() {
         button = SKSpriteNode(imageNamed: "againButton")
         button.name = "try again"
-        button.setScale(0.4)
+        button.setScale(0.3)
         button.zPosition = 2
-        button.position = CGPoint(x: frame.maxX - button.size.width * 1.5, y: button.size.height / 2)
+        button.position = CGPoint(x: frame.maxX - button.size.width * 2, y: button.size.height / 2)
         self.addChild(button)
         tryAgain()
     }
@@ -60,10 +60,10 @@ class GameOver: SKScene {
         let label = SKLabelNode(text: "TRY AGAIN")
         label.name = "try again"
         label.zPosition = 5
-        label.fontSize = 25
+        label.fontSize = 14
         label.fontColor = UIColor.black
         label.fontName = "Thonburi-Bold"
-        label.position = CGPoint(x: button.position.x, y: button.position.y - 10)
+        label.position = CGPoint(x: button.position.x, y: button.position.y - 5)
         self.addChild(label)
     }
     
