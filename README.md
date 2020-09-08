@@ -1,6 +1,6 @@
 # SuitsGame (in Progress)
 
-First Game
+## Game uses SpriteKit. Modeled on the old game "Crew".Tthe game will have a theme from the Suits series.
 
 ![alt tag](https://user-images.githubusercontent.com/45259348/92417439-69108200-f162-11ea-988a-1f9a00ea7aa8.png)
 
